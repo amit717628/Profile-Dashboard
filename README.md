@@ -12,6 +12,10 @@ A dynamic profile dashboard with login system,profile,settings and much more .
 - Profile System with Settings
 - Security
 
+## Login Details
+email : test@gmail.com
+password : test@gmail.com
+- Login with these data after that click on settings and fill the data and change your email password
 
 ## Screenshots
 
