@@ -16,7 +16,8 @@ app.get(`/`,(req,res) => {
     // res.sendFile('pages/home.html' , { root : __dirname});
 })
 app.get(`/login`, async (req,res) => {
-    res.render(`login`)
+    const dbs = await db.get("mail")
+    res.render(`login`,{dbs:dbs})
    
 })
 app.get("/dashboard", async(req,res) => {
@@ -25,7 +26,7 @@ app.get("/dashboard", async(req,res) => {
     const dbs = await db.get("mail")
     res.render("main",{dbs:dbs})
     } else {
-        res.status(501).send("You have not login till yet")
+        res.status(401).send("You have not login till yet")
     }
 })
 app.post(`/login`, async(req,res) => {
@@ -42,7 +43,7 @@ await db.set("auth", true)
         res.send("Wrong Password")
     }
 } else {
-    res.status(501).send("No Account Found")
+    res.status(401).send("No Account Found")
     await db.set("auth", false)
 }
 })
@@ -53,7 +54,7 @@ app.get(`/profile`, async(req,res) => {
     const dbs = await db.get("mail")
     res.render("profile",{dbs:dbs})
     } else {
-        res.status(501).send("You have not login till yet")
+        res.status(401).send("You have not login till yet")
     }
 })
 app.get(`/edit`, async(req,res) => {
@@ -63,7 +64,7 @@ app.get(`/edit`, async(req,res) => {
     const dbs = await db.get("mail")
     res.render(`edit`,{dbs:dbs})
     } else {
-        res.status(501).send("You have not login till yet")
+        res.status(401).send("You have not login till yet")
     }
 })
 app.post(`/edit`,async (req,res) => {
@@ -80,18 +81,18 @@ app.post(`/edit`,async (req,res) => {
     const save = await db.set("mail",{email: email,name:username,avatar:avatar,banner:banner,password:pass,bio:bio})
     res.render("profile",{dbs:dbs})
     } else {
-        res.status(501).send("You have not login till yet")
+        res.status(401).send("You have not login till yet")
     }
 })
 
 app.get("/logout", async(req,res) => {
     const check = await checkauth()
     if(check === true){
-    res.render("login")
+    res.render("home")
     req.destroy()
     await db.set("auth", false)
     } else {
-        res.status(501).send("You have not login till yet")
+        res.status(401).send("You have not login till yet")
     }
     
 })
