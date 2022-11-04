@@ -89,7 +89,6 @@ app.get("/logout", async(req,res) => {
     const check = await checkauth()
     if(check === true){
     res.render("home")
-    req.destroy()
     await db.set("auth", false)
     } else {
         res.status(401).send("You have not login till yet")
