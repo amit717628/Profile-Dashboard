@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Home</title>
+</head>
+<body>
+    <header class="shadow mb-2">
+        <div class="relative flex max-w-screen-xl flex-col overflow-hidden px-4 py-4 md:mx-auto md:flex-row md:items-center">
+          <a href="#" class="flex items-center whitespace-nowrap text-2xl font-black">
+            <span class="text-black">THE AAYAN</span>
+          </a>
+          <input type="checkbox" class="peer hidden" id="navbar-open" />
+          <label class="absolute top-5 right-7 cursor-pointer md:hidden" for="navbar-open">
+            <span class="sr-only">Nav He</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </label>
+          <nav aria-label="Header Navigation" class="peer-checked:mt-8 peer-checked:max-h-56 flex max-h-0 w-full flex-col items-center justify-between overflow-hidden transition-all md:ml-24 md:max-h-full md:flex-row md:items-start">
+            <ul class="flex flex-col items-center space-y-2 md:ml-auto md:flex-row md:space-y-0">
+              <li class="text-gray-600 md:mr-12 hover:text-blue-600"><a href="#">Github</a></li>
+              <li class="text-gray-600 md:mr-12 hover:text-blue-600"><a href="#">Discord</a></li>
+              <li class="text-gray-600 md:mr-12 hover:text-blue-600"><a href="#">Support</a></li>
+              <li class="text-gray-600 md:mr-12 hover:text-blue-600">
+                <a href="/login">
+                <button class="rounded-md border-2 border-blue-600 px-6 py-1 font-medium text-blue-600 transition-colors hover:bg-blue-600 hover:text-white">Login</button>
+            </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      
+
+
+      <div class="relative mx-auto px-4 pt-16 sm:max-w-xl md:max-w-full md:px-8 lg:py-32 xl:px-20">
+        <img class="pointer-events-none absolute bottom-0 left-0 -z-10 opacity-[0.03]" src="/images/l-el4xSJBJMU_wwUrzuJN.png" alt="" />
+        <div class="mx-auto max-w-xl lg:max-w-screen-xl">
+          <div class="mx-auto mb-16 flex flex-col items-center text-center lg:mb-0 lg:max-w-lg">
+            <div class="mb-6 max-w-xl">
+              <div>
+                <p class="bg-teal-accent-400 mb-4 inline-block rounded-full px-3 py-px text-xs font-semibold uppercase tracking-wider text-blue-900">INTRODUCING</p>
+              </div>
+              <h2 class="mb-6 max-w-lg font-sans text-3xl font-bold tracking-tight sm:text-4xl">
+                Boost discord server <br />
+                with our
+                <span class="inline-block text-blue-600">discord automation</span>
+              </h2>
+              <p class="text-base text-gray-700 md:text-lg">Interect with your server members and users with our automation services.</p>
+            </div>
+            <div class="flex items-center">
+              <a href="/login" class="mr-6 inline-flex h-12 items-center justify-center rounded bg-blue-600 px-6 font-medium tracking-wide text-white shadow-md outline-none transition duration-200 hover:bg-blue-700 focus:ring"> Login </a>
+              <a href="https://discord.gg/Z4tKgfgj9Y" aria-label="" class="inline-flex items-center font-semibold text-blue-600 transition-colors duration-200 hover:text-blue-800">Learn more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+</body>
+</html>

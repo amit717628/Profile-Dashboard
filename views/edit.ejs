@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <%- include("./main") -%>
+
+    <div class=" sm:mx-32 lg:mx-32 xl:mx-72 ">
+        <div class="flex justify-between container mx-auto">
+        <div class="w-full">
+        <div class="mt-4 px-4">
+        <h1 class="font-thinner flex text-4xl pt-10 px-5">Settingss
+        </h1>
+        
+        <form class="mx-5 my-5" action="/edit" method="post">
+        <label class="relative block p-3 border-2 border-black rounded" for="name" id="name" >
+          <span class="text-md font-semibold text-zinc-900" htmlFor="name">
+            Name
+          </span>
+          <input class="w-full bg-transparent p-0 text-sm  text-gray-500 focus:outline-none" id="name" type="text" name="name" placeholder="Your name"/>
+        </label>
+       <br>
+        <label class="relative block p-3 border-2 border-black rounded" for="pic" id="pic" >
+          <span class="text-md font-semibold text-zinc-900" htmlFor="pic">
+            Avatar Url
+          </span>
+          <input class="w-full bg-transparent p-0 text-sm  text-gray-500 focus:outline-none" id="pic" type="url" name="pic" placeholder="Avatar Url"/>
+        </label>
+
+        <br>
+        <label class="relative block p-3 border-2 border-black rounded" for="banner" id="banner" >
+          <span class="text-md font-semibold text-zinc-900" htmlFor="banner">
+            Banner Url
+          </span>
+          <input class="w-full bg-transparent p-0 text-sm  text-gray-500 focus:outline-none" id="banner" type="url" name="banner" placeholder="Banner Url"/>
+        </label>
+
+        <br>
+        <label class="relative block p-3 border-2 border-black rounded" for="mail" id="mail" >
+          <span class="text-md font-semibold text-zinc-900" htmlFor="mail">
+            Email
+          </span>
+          <input class="w-full bg-transparent p-0 text-sm  text-gray-500 focus:outline-none" id="mail" type="email" name="mail" placeholder="Your Email"/>
+        </label>
+
+        <br>
+        <label class="relative block p-3 border-2 border-black rounded" for="password" id="password" >
+          <span class="text-md font-semibold text-zinc-900" htmlFor="password">
+           New Password
+          </span>
+          <input class="w-full bg-transparent p-0 text-sm  text-gray-500 focus:outline-none" id="password" type="password" name="password" placeholder="Your Password"/>
+        </label>
+
+        <label class="relative block p-3 border-2 mt-5 border-black rounded" htmlFor="bioo">
+          <span class="text-md font-semibold text-zinc-900" htmlFor="bios">
+            Bio
+          </span>
+        
+          <input class="w-full   p-0 text-sm border-none bg-transparent text-gray-500 focus:outline-none" id="bios" type="text" name="bios" placeholder="Write Your Bio" />
+        </label>
+        
+        
+        
+        
+
+        <Button class="mt-5 border-2 px-5 py-2 rounded-lg border-black border-b-4 font-black translate-y-2 border-l-4">
+          Update
+        </Button>
+        </form>
+          </div>
+            </div>
+        
+        
+        </div>
+        </div>
+        </div>
+</body>
+</html>

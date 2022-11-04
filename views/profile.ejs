@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>Profile</title>
+</head>
+<body>
+    <%- include("./main") -%>
+    <div class=" bg-gray-200 dark:bg-gray-900 flex flex-wrap items-center justify-center">
+        <div class="container max-w-lg bg-white rounded dark:bg-gray-800 shadow-lg transform duration-200 easy-in-out m-12">
+          <div class="h-2/4 sm:h-64 overflow-hidden">
+            <img class="w-full rounded-t"
+              src="<%=dbs.banner%>"
+              alt="banner" />
+          </div>
+          <div class="flex justify-start px-5 -mt-12 mb-5">
+            <span clspanss="block relative h-32 w-32">
+              <img alt="avatar"
+                src="<%=dbs.avatar%>"
+                class="mx-auto object-cover rounded-full h-24 w-24 bg-white p-1" />
+            </span>
+          </div>
+          <div class="">
+            <div class="px-7 mb-8">
+              <h2 class="text-3xl font-bold text-green-800 dark:text-gray-300"><%=dbs.name%></h2>
+              <p class="text-gray-400 mt-2 dark:text-gray-400">Developer</p>
+              <p class="text-gray-400 mt-2 dark:text-gray-400"><%=dbs.email%></p>
+              <p class="mt-2 text-gray-600 dark:text-gray-300"><%=dbs.bio%></p>
+             
+              <div 
+                class="justify-center px-4 py-2 cursor-pointer bg-green-900 max-w-min mx-auto mt-8 rounded-lg text-gray-300 hover:bg-green-800 hover:text-gray-100 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-gray-200">
+                <a href="https://github.com/AAYAN717628">Github</a>
+              </div>
+              <div class="flex flex-wrap justify-center gap-2 sm:gap-4 mt-8">
+               
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+      
+        body {
+          font-family: 'Poppins', sans-serif;
+        }
+      </style>
+</body>
+</html>
